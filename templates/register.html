@@ -1,0 +1,14 @@
+ {% extends "base.html" %}
+{% block content %}
+<h2>Register</h2>
+<form method="post" action="{{ url_for('register') }}">
+  <label>Username</label><br>
+  <input name="username" required><br>
+  <label>Email</label><br>
+  <input name="email" type="email"><br>
+  <label>Password</label><br>
+  <input name="password" type="password" required><br>
+  <input type="hidden" name="referred_by" value="{{ ref or '' }}">
+  <button type="submit">Register</button>
+</form>
+{% endblock %}

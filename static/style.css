@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; padding: 10px; }
+nav { margin-bottom: 10px; }
+nav a { margin-right: 10px; }
+.container { max-width: 900px; margin: auto;}
+.flash { padding:8px; margin-bottom:8px; border-radius:4px;}
+.flash.success { background:#e0ffe0; border:1px solid #70d570;}
+.flash.danger { background:#ffe0e0; border:1px solid #ff8a8a;}
+.flash.info { background:#e8f0ff; border:1px solid #8ab0ff;}

@@ -1,0 +1,11 @@
+ {% extends "base.html" %}
+{% block content %}
+<h2>Request Withdrawal</h2>
+<p>Your balance: ${{ '%.4f'|format(balance) }}</p>
+<form method="post" action="{{ url_for('withdraw') }}">
+  <label>Amount</label><br>
+  <input name="amount" type="number" step="0.01" required><br>
+  <button type="submit">Request Withdraw</button>
+</form>
+<p>Minimum withdraw: ${{ min_withdraw }}</p>
+{% endblock %}

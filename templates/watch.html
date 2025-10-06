@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Watch Video</h2>
+<p>Credit: ${{ credit }}</p>
+
+<!-- For demo: a sample video using an mp4 link or embed a YouTube iframe.
+     Use a small local MP4 or public URL for demo. -->
+<video id="video" width="640" controls>
+  <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<p id="status">Not credited yet.</p>
+
+<script src="{{ url_for('static', filename='watch.js') }}"></script>
+<script>
+  const VIDEO_ID = "{{ video_id }}";
+  const VIDEO_DURATION = 30; // dummy fallback; JS reads actual duration
+  window.initWatch(VIDEO_ID, {{ credit }});
+</script>
+{% endblock %}
+
